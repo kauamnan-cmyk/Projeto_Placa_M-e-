@@ -1,0 +1,9 @@
+	A memória RAM é um tipo de memória temporária usada pelo computador para armazenar os dados que estão sendo utilizados naquele momento. 
+O nome RAM vem de “Random Access Memory”, que significa “Memória de Acesso Aleatório”. Ela funciona como uma área de trabalho rápida entre o processador e o armazenamento do computador, 
+como o SSD ou HD. Quando você abre um programa, um jogo, um navegador ou até mesmo o sistema operacional, os dados necessários são carregados do SSD para a RAM, 
+porque a RAM é muito mais rápida e permite que o processador acesse essas informações quase instantaneamente.
+	A RAM é considerada uma memória volátil, o que significa que ela perde todos os dados armazenados quando o computador é desligado. 
+Diferente do SSD ou HD, ela não serve para guardar arquivos permanentemente, mas apenas para auxiliar o funcionamento do sistema enquanto ele está ligado. Durante o uso do computador, 
+a CPU troca informações constantemente com a RAM, buscando instruções, texturas de jogos, páginas da internet, arquivos temporários e muitos outros dados necessários para o funcionamento dos programas.
+	Nos computadores modernos, especialmente nos processadores Ryzen e Intel atuais, o controlador de memória já fica dentro do próprio processador, o que melhora bastante a velocidade de comunicação com a RAM. 
+Além disso, existem diferentes gerações de memória, como DDR3, DDR4 e DDR5, sendo cada uma mais rápida e eficiente que a anterior.

@@ -1,0 +1,13 @@
+	Os slots PCI Express, também chamados de PCIe, são conexões da placa-mãe usadas para instalar placas de expansão no computador. 
+Eles permitem que componentes adicionais se comuniquem diretamente com o processador e o chipset em alta velocidade. 
+Entre os dispositivos mais comuns conectados nesses slots estão placas de vídeo, placas de rede, placas de captura, placas de som, 
+SSDs adaptadores e outras expansões de hardware.
+	O PCI Express substituiu tecnologias antigas como PCI e AGP, oferecendo velocidades muito maiores e comunicação serial de alta eficiência. Cada slot PCIe possui “lanes”,
+ que são canais de transmissão de dados. Quanto mais lanes um slot possui, maior é sua velocidade de transferência. Por isso existem diferentes tamanhos de slots, 
+como x1, x4, x8 e x16.
+	Um slot PCIe x1 é pequeno e normalmente usado para placas simples, como placas Wi-Fi ou placas de som. O PCIe x16 é o maior e mais rápido, 
+sendo utilizado principalmente para placas de vídeo, porque elas precisam transferir enormes quantidades de dados rapidamente entre a GPU e o processador. 
+Também existem slots x4 e x8, usados em alguns SSDs profissionais, placas de captura ou servidores.
+	As gerações do PCIe também influenciam bastante na velocidade. Existem versões como PCIe 3.0, 4.0 e 5.0. 
+Cada nova geração praticamente dobra a taxa de transferência da anterior. Um PCIe 4.0 x16, por exemplo, consegue transferir muito mais dados do que um PCIe 3.0 x16. 
+Mesmo assim, as versões costumam ser compatíveis entre si, então uma placa PCIe 3.0 pode funcionar em um slot PCIe 4.0, apenas limitada à velocidade suportada.

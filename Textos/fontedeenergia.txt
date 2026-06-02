@@ -1,0 +1,20 @@
+	A alimentação de energia em um computador é o sistema responsável por fornecer eletricidade para todos os componentes funcionarem corretamente. 
+Essa energia vem da fonte de alimentação, também chamada de PSU (“Power Supply Unit”), 
+que converte a corrente elétrica da tomada em tensões adequadas para o hardware do computador.
+	A energia da tomada chega em corrente alternada, conhecida como AC, enquanto os componentes do computador trabalham com corrente contínua, chamada DC. 
+A fonte faz essa conversão e distribui diferentes tensões, como 12V, 5V e 3,3V, usadas por peças específicas do sistema. O processador e a placa de vídeo, 
+por exemplo, utilizam principalmente a linha de 12V por consumirem mais energia.
+	Depois que a energia sai da fonte, ela é enviada para a placa-mãe através dos conectores principais. O maior deles é o cabo ATX de 24 pinos, 
+responsável por alimentar a placa-mãe em geral. Existe também o conector EPS de 4 ou 8 pinos, dedicado ao processador, 
+porque a CPU exige alimentação estável e de alta potência. Placas de vídeo mais fortes normalmente possuem conectores PCIe adicionais vindos diretamente da fonte.
+	Na própria placa-mãe existem circuitos chamados VRMs, sigla para “Voltage Regulator Module”. 
+Esses reguladores de tensão reduzem e controlam a energia que chega da fonte, convertendo os 12V em valores muito menores e extremamente estáveis que o processador, 
+memória RAM e chipset precisam para funcionar. O processador moderno trabalha com tensões muito baixas, 
+frequentemente próximas de 1V, então o VRM é essencial para evitar danos e manter estabilidade.
+	A ASUS TUF Gaming A520M-PLUS possui VRMs próximos ao socket do processador, normalmente cobertos por dissipadores metálicos para resfriamento. 
+Esses componentes aquecem bastante porque trabalham constantemente convertendo energia elétrica.A qualidade da alimentação é extremamente importante. Uma fonte ruim pode causar:travamentos,desligamentos,perda de desempenho,danos em componentes,instabilidade elétrica.
+	Por isso existem certificações como 80 Plus, que indicam eficiência energética da fonte. 
+Fontes mais eficientes desperdiçam menos energia em forma de calor e fornecem tensão mais estável.
+	Além da alimentação principal, a placa-mãe possui circuitos auxiliares responsáveis por distribuir energia para USB, SSDs, ventoinhas, 
+LEDs e outros dispositivos conectados. Também existe a bateria CMOS, que mantém algumas configurações da BIOS/UEFI salvas mesmo quando o computador está desligado.
+	

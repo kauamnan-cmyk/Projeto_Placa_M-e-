@@ -1,0 +1,9 @@
+	A placa-mãe é o principal componente de um computador, responsável por conectar e permitir a comunicação entre todas as peças do sistema. 
+Ela funciona como uma grande central de interligação onde o processador, a memória RAM, a placa de vídeo, o armazenamento, os dispositivos USB, 
+a rede e diversos outros componentes trabalham juntos. Sem a placa-mãe, nenhuma das peças conseguiria se comunicar corretamente.
+	A placa-mãe também é responsável por distribuir energia elétrica para os componentes através dos reguladores de tensão, conhecidos como VRM. 
+Eles convertem a energia da fonte para níveis adequados ao processador, memória e chipset. Além disso, ela possui o chipset, que controla a comunicação entre periféricos, 
+portas USB, armazenamento, áudio, rede e outras funções do sistema. Nas placas modernas, boa parte das funções que antigamente eram feitas pela ponte norte foram incorporadas diretamente ao processador.
+	A placa-mãe também define muitas limitações e capacidades do computador, como o tipo de processador compatível, quantidade máxima de memória RAM, 
+geração de armazenamento suportada, velocidade das conexões e recursos extras. A ASUS TUF Gaming A520M-PLUS, por exemplo, 
+utiliza socket AM4 e suporta processadores AMD Ryzen compatíveis com o chipset A520, além de memórias DDR4 e conexões PCIe modernas.
