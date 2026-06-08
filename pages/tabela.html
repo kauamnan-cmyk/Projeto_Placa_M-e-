@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Componentes</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="pagina-tabela">
+
+    <header class="destaque">
+        <div class="emblema-destaque">TABELA COMPONENTES · ARQUITETURA</div>
+        <h1>Tabela de Componentes</h1>
+        <p class="subtitulo-destaque">Visão comparativa e especificações dos barramentos e memórias da placa-mãe</p>
+        <div class="linha-destaque"></div>
+    </header>
+
+    <div class="tabela-responsiva">
+        <table>
+            <thead>
+                <tr>
+                    <th>Componente</th>
+                    <th>Tipo / Barramento</th>
+                    <th>Função</th>
+                    <th>Velocidade / Taxa</th>
+                    <th>Volátil</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="Processador(index).html" class="link-componente">Processador (CPU)</a></td>
+                    <td>Semicondutor central</td>
+                    <td>Cálculos e execução de instruções do sistema.</td>
+                    <td>Até 4.6 GHz (Ryzen)</td>
+                    <td><span class="indicador-volatilidade volatil-sim">Sim</span></td>
+                </tr>
+                <tr>
+                    <td><a href="MemoriaRam(index).html" class="link-componente">Memória RAM</a></td>
+                    <td>Memória Principal (DDR4)</td>
+                    <td>Armazena dados voláteis de trabalho imediato da CPU.</td>
+                    <td>Até 4600 MHz</td>
+                    <td><span class="indicador-volatilidade volatil-sim">Sim</span></td>
+                </tr>
+                <tr>
+                    <td><a href="MemoriaSecundaria(index).html" class="link-componente">SSD NVMe M.2</a></td>
+                    <td>Armazenamento Flash (PCIe Gen 3/4)</td>
+                    <td>Armazenamento permanente ultrarrápido para SO e arquivos.</td>
+                    <td>Até 3500+ MB/s</td>
+                    <td><span class="indicador-volatilidade volatil-nao">Não</span></td>
+                </tr>
+                <tr>
+                    <td><a href="MemoriaSecundaria(index).html" class="link-componente">HD SATA III</a></td>
+                    <td>Armazenamento Magnético</td>
+                    <td>Armazenamento permanente de alta capacidade para arquivos pesados.</td>
+                    <td>Até 150 MB/s</td>
+                    <td><span class="indicador-volatilidade volatil-nao">Não</span></td>
+                </tr>
+                <tr>
+                    <td><a href="SlotPCIExpress(index).html" class="link-componente">Slot PCIe x16</a></td>
+                    <td>Barramento Serial de Expansão</td>
+                    <td>Interface para placas de vídeo dedicadas de alta performance.</td>
+                    <td>Até 32 GB/s (Gen 4 x16)</td>
+                    <td><span class="indicador-volatilidade volatil-na">N/A</span></td>
+                </tr>
+                <tr>
+                    <td><a href="ConectoresUsb(index).html" class="link-componente">Portas USB 3.2 Gen 1</a></td>
+                    <td>Barramento E/S Externo</td>
+                    <td>Entrada/Saída para periféricos e transferência geral de dados.</td>
+                    <td>Até 5 Gbps</td>
+                    <td><span class="indicador-volatilidade volatil-na">N/A</span></td>
+                </tr>
+                <tr>
+                    <td><a href="FonteDeEnergia(index).html" class="link-componente">VRM (Regulador)</a></td>
+                    <td>Circuito de Alimentação</td>
+                    <td>Converte os 12V da fonte em voltagens menores (~1V) e estáveis para a CPU.</td>
+                    <td>N/A (Entrega energia)</td>
+                    <td><span class="indicador-volatilidade volatil-na">N/A</span></td>
+                </tr>
+                <tr>
+                    <td><a href="BateriaCmos(index).html" class="link-componente">Bateria CMOS</a></td>
+                    <td>Bateria moeda CR2032</td>
+                    <td>Mantém o relógio do sistema (RTC) e configurações da BIOS ativas.</td>
+                    <td>3V contínuo</td>
+                    <td><span class="indicador-volatilidade volatil-nao">Não</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button class="botao-voltar" onclick="window.location.href='../index.html'">Voltar para Home</button>
+
+</body>
+</html>

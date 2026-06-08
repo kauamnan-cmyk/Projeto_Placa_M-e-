@@ -1,0 +1,71 @@
+(01) NOME DO PROJETO:
+
+Projeto Placa Mãe
+
+(02) LINK DA PUBLICAÇÃO DO PROJETO:
+
+(03) PARTICIPANTES E PAPÉIS:
+
+Kauamnan Melo (Tech Lead/Redator),
+Luka Emmanuel (dev)
+Pedro Francisco (design)
+Elyon Paulo (dev)
+
+
+(04) OBJETIVO PRINCIPAL DO PROJETO:
+
+	O presente projeto tem como objetivo desenvolver uma plataforma web educacional voltada à apresentação dos conceitos fundamentais relacionados à arquitetura e ao funcionamento 
+dos computadores pessoais. A proposta busca oferecer um ambiente digital capaz de reunir informações técnicas, conteúdos didáticos e recursos visuais que facilitem a compreensão dos 
+componentes que constituem um sistema computacional moderno. O site foi concebido para atender estudantes, professores e entusiastas da área de tecnologia que desejam aprofundar seus 
+conhecimentos sobre hardware e sua interação com os demais elementos do sistema.
+	Além da simples apresentação dos componentes físicos, o projeto tem como finalidade demonstrar de maneira clara e organizada a forma como cada elemento participa do 
+processamento de informações. Dessa forma, o usuário poderá compreender não apenas a função individual de dispositivos como processadores, memórias e unidades de armazenamento,
+mas também a maneira como esses componentes trabalham em conjunto para possibilitar a execução de programas e tarefas computacionais. A plataforma pretende atuar como um recurso
+complementar ao ensino tradicional, contribuindo para a democratização do conhecimento tecnológico e para a formação de uma base sólida de aprendizado na área da computação.
+
+(05) DESCRIÇÃO RESUMIDA DO PROJETO:
+
+	O projeto consiste no desenvolvimento de um portal educacional especializado em arquitetura e funcionamento de computadores pessoais, estruturado para servir como uma
+ferramenta de apoio ao ensino e à aprendizagem. A motivação para sua criação surgiu da percepção de que muitos estudantes apresentam dificuldades na compreensão dos conceitos 
+relacionados ao hardware dos computadores, especialmente devido à complexidade técnica encontrada em livros e materiais especializados. Diante dessa realidade, 
+o site foi planejado para apresentar os conteúdos de maneira mais acessível, sem abrir mão do rigor técnico necessário para uma formação adequada.
+A plataforma disponibilizará informações detalhadas sobre os principais componentes presentes em um computador moderno. Entre os conteúdos abordados estarão a placa-mãe,
+o processador, a memória RAM, os dispositivos de armazenamento, a fonte de alimentação, as placas de expansão, os barramentos de comunicação e os dispositivos de entrada e saída.
+Cada componente será apresentado por meio de explicações textuais, imagens ilustrativas e descrições de suas funções dentro do sistema computacional. O objetivo é proporcionar uma
+visão abrangente da estrutura física do computador, permitindo que o usuário compreenda a importância de cada elemento para o funcionamento geral da máquina.Outro aspecto 
+relevante do projeto é a explicação dos processos internos responsáveis pela execução das tarefas computacionais. 
+	Serão abordados conceitos como o ciclo de busca, decodificação e 
+execução de instruções realizado pela CPU, o gerenciamento de memória, o armazenamento de dados, a comunicação entre dispositivos e o papel desempenhado pelos sistemas operacionais. 
+Esses conteúdos permitirão que o usuário desenvolva uma compreensão mais profunda sobre a forma como os computadores processam informações e executam aplicações no dia a dia.
+Do ponto de vista tecnológico, o sistema será desenvolvido utilizando ferramentas modernas de desenvolvimento web, garantindo compatibilidade com diferentes navegadores e dispositivos. 
+A interface será responsiva e organizada de forma intuitiva, permitindo que o usuário navegue pelos conteúdos com facilidade. A estrutura modular do site facilitará futuras expansões, 
+possibilitando a inclusão de novos tópicos, exercícios interativos, simuladores e materiais complementares que possam enriquecer ainda mais a experiência de aprendizagem.
+	Além de seu caráter educacional, o projeto também representa uma oportunidade de aplicação prática dos conhecimentos adquiridos ao longo da graduação. 
+Seu desenvolvimento envolve etapas de planejamento, levantamento de requisitos, modelagem, desenvolvimento de interfaces, implementação de funcionalidades e organização de conteúdo técnico. 
+Dessa forma, o trabalho não apenas gera benefícios para os usuários da plataforma, mas também contribui para o aprimoramento das competências acadêmicas e profissionais dos integrantes 
+envolvidos em sua construção.
+
+(06) FINALIDADE:
+
+	O projeto foi desenvolvido com finalidade educacional, visando beneficiar estudantes, professores, entusiastas da área de tecnologia e demais pessoas interessadas em compreender 
+o funcionamento dos computadores. A proposta busca facilitar o acesso ao conhecimento sobre arquitetura de computadores por meio de uma plataforma digital gratuita e acessível, 
+contribuindo para a disseminação de informações técnicas de forma clara e organizada. Dessa maneira, o sistema apresenta potencial para auxiliar processos de aprendizagem tanto em 
+ambientes acadêmicos quanto em estudos individuais.
+
+(07) PARTICIPAÇÃO:
+	Todos os membros tiveram participaçao no projeto,em suas respectivas funções.
+
+(08) APLICAÇÃO DO PROJETO:
+
+	Os conhecimentos teóricos adquiridos na disciplina foram amplamente aplicados durante o desenvolvimento do projeto. Conceitos relacionados à análise de requisitos, 
+arquitetura de sistemas, desenvolvimento web, organização de conteúdo digital e experiência do usuário foram utilizados para planejar e implementar a plataforma. Além disso, 
+o projeto permitiu a aplicação prática de conhecimentos sobre computação e arquitetura de computadores, transformando conteúdos estudados em sala de aula em uma ferramenta educacional 
+acessível à comunidade. Como resultado, o conhecimento acadêmico foi convertido em um recurso que pode auxiliar estudantes e interessados na compreensão de conceitos fundamentais da área 
+tecnológica.
+
+(09) CONCLUSÃO:
+
+	O desenvolvimento do Portal Educacional de Arquitetura e Funcionamento de Computadores permitiu unir conhecimentos teóricos e práticos em um projeto com potencial impacto educacional.
+A plataforma foi concebida para facilitar a compreensão de conceitos fundamentais da computação, oferecendo uma abordagem mais acessível e organizada para o estudo da arquitetura de computadores.
+Espera-se que o sistema contribua para o aprendizado de estudantes e demais interessados, promovendo a disseminação do conhecimento tecnológico e incentivando a formação de novos profissionais 
+na área da computação.

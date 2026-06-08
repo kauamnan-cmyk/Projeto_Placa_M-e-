@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento de PC</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="pagina-orcamento">
+
+    <header class="destaque">
+        <div class="emblema-destaque">SIMULADOR · PLACA MÃE</div>
+        <h1>Orçamento de Componentes</h1>
+        <p class="subtitulo-destaque">Calcule e monte a configuração ideal compatível com a placa-mãe A520M</p>
+        <div class="linha-destaque"></div>
+    </header>
+
+    <main class="container-orcamento">
+        
+        <!-- Formulário de Seleção -->
+        <section class="formulario-orcamento">
+            <h3>Selecione os Componentes</h3>
+            
+            <!-- Processador -->
+            <div class="grupo-formulario">
+                <label for="selecao-cpu">Processador (Socket AM4)</label>
+                <select id="selecao-cpu" onchange="updateBudget()">
+                    <option value="0" data-price="0">-- Nenhum selecionado --</option>
+                    <option value="1" data-price="650">AMD Ryzen 5 4500 (6 Cores / 12 Threads) - R$ 650,00</option>
+                    <option value="2" data-price="890">AMD Ryzen 5 5600 (6 Cores / 12 Threads) - R$ 890,00</option>
+                    <option value="3" data-price="1350">AMD Ryzen 7 5700X (8 Cores / 16 Threads) - R$ 1.350,00</option>
+                </select>
+            </div>
+
+            <!-- Memória RAM -->
+            <div class="grupo-formulario">
+                <label for="selecao-ram">Memória RAM (DDR4)</label>
+                <select id="selecao-ram" onchange="updateBudget()">
+                    <option value="0" data-price="0">-- Nenhum selecionado --</option>
+                    <option value="1" data-price="180">8GB DDR4 3200MHz - R$ 180,00</option>
+                    <option value="2" data-price="320">16GB DDR4 3200MHz (Dual Channel) - R$ 320,00</option>
+                    <option value="3" data-price="620">32GB DDR4 3600MHz (Dual Channel) - R$ 620,00</option>
+                </select>
+            </div>
+
+            <!-- Placa de Vídeo -->
+            <div class="grupo-formulario">
+                <label for="selecao-gpu">Placa de Vídeo (PCIe x16)</label>
+                <select id="selecao-gpu" onchange="updateBudget()">
+                    <option value="0" data-price="0">-- Nenhum selecionado --</option>
+                    <option value="1" data-price="1100">Galax GTX 1660 Super 6GB - R$ 1.100,00</option>
+                    <option value="2" data-price="1650">NVIDIA RTX 3060 12GB - R$ 1.650,00</option>
+                    <option value="3" data-price="2200">NVIDIA RTX 4060 Ti 8GB - R$ 2.200,00</option>
+                </select>
+            </div>
+
+            <!-- Armazenamento -->
+            <div class="grupo-formulario">
+                <label for="selecao-ssd">Armazenamento Secundário</label>
+                <select id="selecao-ssd" onchange="updateBudget()">
+                    <option value="0" data-price="0">-- Nenhum selecionado --</option>
+                    <option value="1" data-price="250">SSD M.2 NVMe 500GB - R$ 250,00</option>
+                    <option value="2" data-price="420">SSD M.2 NVMe 1TB (PCIe Gen 4) - R$ 420,00</option>
+                    <option value="3" data-price="350">HD SATA III 2TB - R$ 350,00</option>
+                </select>
+            </div>
+
+            <!-- Fonte de Alimentação -->
+            <div class="grupo-formulario">
+                <label for="selecao-fonte">Fonte de Alimentação</label>
+                <select id="selecao-fonte" onchange="updateBudget()">
+                    <option value="0" data-price="0">-- Nenhum selecionado --</option>
+                    <option value="1" data-price="290">Fonte 500W 80 Plus Bronze - R$ 290,00</option>
+                    <option value="2" data-price="450">Fonte 650W 80 Plus Gold - R$ 450,00</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Resumo do Orçamento -->
+        <section class="resultado-orcamento">
+            <h3>Resumo da Montagem</h3>
+            
+            <div id="lista-resumo">
+                <div class="item-resumo"><span>Nenhum componente selecionado</span></div>
+            </div>
+
+            <div class="container-total">
+                <span class="rotulo-total">Total Estimado</span>
+                <span class="preco-total" id="preco-total">R$ 0,00</span>
+            </div>
+        </section>
+
+    </main>
+
+    <button class="botao-voltar" onclick="window.location.href='../index.html'">Voltar para Home</button>
+
+    <script>
+        function updateBudget() {
+            const selects = [
+                { id: 'selecao-cpu', label: 'Processador' },
+                { id: 'selecao-ram', label: 'Memória RAM' },
+                { id: 'selecao-gpu', label: 'Placa de Vídeo' },
+                { id: 'selecao-ssd', label: 'Armazenamento' },
+                { id: 'selecao-fonte', label: 'Fonte de Energia' }
+            ];
+
+            let total = 0;
+            let summaryHTML = '';
+            let selectedCount = 0;
+
+            selects.forEach(selectObj => {
+                const selectEl = document.getElementById(selectObj.id);
+                const selectedOption = selectEl.options[selectEl.selectedIndex];
+                const price = parseFloat(selectedOption.getAttribute('data-price')) || 0;
+
+                if (price > 0) {
+                    selectedCount++;
+                    total += price;
+                    const text = selectedOption.text.split(' - ')[0]; // Pega o nome sem o preço no final
+                    summaryHTML += `
+                        <div class="item-resumo">
+                            <span><strong>${selectObj.label}:</strong> ${text}</span>
+                            <span class="price">R$ ${price.toFixed(2).replace('.', ',')}</span>
+                        </div>
+                    `;
+                }
+            });
+
+            if (selectedCount === 0) {
+                summaryHTML = '<div class="item-resumo"><span>Nenhum componente selecionado</span></div>';
+            }
+
+            document.getElementById('lista-resumo').innerHTML = summaryHTML;
+            document.getElementById('preco-total').textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+        }
+    </script>
+</body>
+</html>

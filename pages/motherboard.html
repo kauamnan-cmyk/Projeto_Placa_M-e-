@@ -3,9 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Mapa da Placa-Mãe</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-    
+<body class="pagina-mapa">
+    <div class="container-mapa">
+        <header class="destaque">
+            <div class="emblema-destaque">DIAGRAMA INTERATIVO · PLACA MÃE</div>
+            <h1>Mapa Interativo</h1>
+            <p class="subtitulo-destaque">Clique nas áreas destacadas da placa-mãe para explorar seus componentes</p>
+            <div class="linha-destaque"></div>
+        </header>
+        <img
+          src="placa-mae.jpg"
+          usemap="#placaMaeMap"
+          width="679"
+          height="658"
+          class="imagem-central"
+          style="border: 2px solid rgba(0, 255, 0, 0.4); box-shadow: 0 0 30px rgba(0, 255, 0, 0.2);"
+        />
+
+<map name="placaMaeMap">
+
+  <!-- Soquete CPU -->
+  <area
+    shape="rect"
+    coords="285,170,395,285"
+    href="Processador(index).html"
+    alt="Soquete do Processador"
+    title="Soquete do Processador"
+  >
+
+  <!-- Slots RAM -->
+  <area
+    shape="rect"
+    coords="470,85,575,370"
+    href="MemoriaRam(index).html"
+    alt="Slots de Memória RAM"
+    title="Slots de Memória RAM"
+  >
+
+  <!-- Conector ATX 24 pinos -->
+  <area
+    shape="rect"
+    coords="595,140,645,340"
+    href="FonteDeEnergia(index).html"
+    alt="Conector ATX 24 pinos"
+    title="Conector ATX 24 pinos"
+  >
+
+  <!-- VRM -->
+  <area
+    shape="rect"
+    coords="220,25,430,145"
+    href="FonteDeEnergia(index).html"
+    alt="VRM"
+    title="Circuito Regulador de Tensão (VRM)"
+  >
+
+  <!-- Dissipador VRM -->
+  <area
+    shape="rect"
+    coords="0,20,190,220"
+    href="FonteDeEnergia(index).html"
+    alt="Dissipador VRM"
+    title="Dissipador do VRM"
+  >
+
+  <!-- Slot PCIe x16 -->
+  <area
+    shape="rect"
+    coords="165,430,485,470"
+    href="SlotPCIExpress(index).html"
+    alt="PCI Express x16"
+    title="Slot PCI Express x16"
+  >
+
+  <!-- Bateria CMOS -->
+  <area
+    shape="circle"
+    coords="195,505,32"
+    href="BateriaCmos(index).html"
+    alt="Bateria CMOS"
+    title="Bateria CMOS"
+  >
+
+  <!-- Chipset -->
+  <area
+    shape="rect"
+    coords="425,480,545,595"
+    href="#chipset"
+    alt="Chipset"
+    title="Chipset AMD A520"
+  >
+
+  <!-- Portas SATA -->
+  <area
+    shape="rect"
+    coords="505,590,675,650"
+    href="MemoriaSecundaria(index).html"
+    alt="Portas SATA"
+    title="Portas SATA"
+  >
+
+  <!-- Áudio onboard -->
+  <area
+    shape="rect"
+    coords="0,540,95,655"
+    href="#audio"
+    alt="Áudio Onboard"
+    title="Circuito de Áudio"
+  >
+
+  <!-- Painel frontal -->
+  <area
+    shape="rect"
+    coords="345,615,505,655"
+    href="#frontpanel"
+    alt="Painel Frontal"
+    title="Conectores do Painel Frontal"
+  >
+
+  <!-- Conectores USB internos -->
+  <area
+    shape="rect"
+    coords="250,585,380,645"
+    href="ConectoresUsb(index).html"
+    alt="USB Interno"
+    title="Conectores USB Internos"
+  >
+
+</map>
+        <button class="botao-voltar" onclick="window.location.href='../index.html'">Voltar para Home</button>
+    </div>
 </body>
 </html>

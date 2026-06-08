@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUF Gaming A520M - Arquitetura de Computadores</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pagina-inicial">
+
+    <!-- ── Header / Navbar ── -->
+    <header class="cabecalho-principal">
+        <div class="container-logo">
+            <span class="texto-logo">TUF A520M</span>
+            <span class="emblema-logo">ARCH</span>
+        </div>
+        <nav class="menu-navegacao">
+            <a href="index.html" class="active">Landing Page</a>
+            <a href="pages/motherboard.html">Placa Mãe</a>
+            <a href="pages/tabela.html">Tabela de Componentes</a>
+            <a href="pages/grid.html">Grid</a>
+            <a href="pages/orçamento.html">Orçamento</a>
+            <a href="pages/formulario.html">Formulário</a>
+            <a href="#secao-sobre">Sobre</a>
+        </nav>
+    </header>
+
+    <!-- ── Hero Section ── -->
+    <section class="destaque">
+        <div class="emblema-destaque">ARQUITETURA DE COMPUTADORES · PROJETO</div>
+        <h1>Placa-Mãe TUF A520M</h1>
+        <p class="subtitulo-destaque">Uma exploração interativa e detalhada secao-sobre o funcionamento e circuitos de uma placa-mãe moderna.</p>
+        <div class="linha-destaque"></div>
+    </section>
+
+    <!-- ── Call to Action do Mapa ── -->
+    <section class="chamada-mapa">
+        <h2>Mapa Interativo da Placa-Mãe</h2>
+        <p>Acesse o diagrama interativo em alta definição da placa-mãe. Clique diretamente nos componentes para entender a fundo o papel de cada circuito na comunicação geral do hardware.</p>
+        <button class="botao-voltar botao-explorar" onclick="location.href='pages/motherboard.html'">Acessar Mapa Interativo</button>
+    </section>
+
+    <!-- ── Componentes Showcase ── -->
+    <section class="vitrine-componentes">
+        <h2 class="titulo-secao">Componentes Principais</h2>
+        <div class="grade-cartoes">
+            <!-- Processador -->
+            <div class="cartao-componente" onclick="location.href='pages/Processador(index).html'">
+                <img src="images/figures/IMG_9608_1.jpg" alt="Processador">
+                <h3>Processador (CPU)</h3>
+                <p>O cérebro do computador, encarregado de ler e executar todas as instruções básicas de processamento do sistema.</p>
+                <span class="botao-cartao">Estudar CPU ➔</span>
+            </div>
+            
+            <!-- Memória RAM -->
+            <div class="cartao-componente" onclick="location.href='pages/MemoriaRam(index).html'">
+                <img src="images/figures/IMG_9608C.jpg" alt="Memória RAM">
+                <h3>Memória RAM</h3>
+                <p>A memória principal de acesso rápido que armazena os dados de execução e processos em tempo real.</p>
+                <span class="botao-cartao">Estudar RAM ➔</span>
+            </div>
+
+            <!-- PCI Express -->
+            <div class="cartao-componente" onclick="location.href='pages/SlotPCIExpress(index).html'">
+                <img src="images/slotPcie/hq720.jpg" alt="Barramento PCI Express">
+                <h3>Slot PCI Express</h3>
+                <p>O barramento de alta velocidade utilizado para placas de expansão rápidas, como placas de vídeo e SSDs NVMe.</p>
+                <span class="botao-cartao">Estudar PCIe ➔</span>
+            </div>
+
+            <!-- Armazenamento -->
+            <div class="cartao-componente" onclick="location.href='pages/MemoriaSecundaria(index).html'">
+                <img src="images/slotsdememoriasecundaria/istockphoto-501446267-1024x1024.jpg" alt="SSD e Armazenamento">
+                <h3>Armazenamento Permanente</h3>
+                <p>Memórias secundárias (SSD, HD) usadas para guardar arquivos e o sistema operacional de forma persistente.</p>
+                <span class="botao-cartao">Estudar SSD/HD ➔</span>
+            </div>
+
+            <!-- Fonte de Alimentação -->
+            <div class="cartao-componente" onclick="location.href='pages/FonteDeEnergia(index).html'">
+                <img src="images/alimentaçao de energia/Fonte-de-alimentacao-001.png" alt="Alimentação de energia">
+                <h3>Alimentação e VRM</h3>
+                <p>A distribuição e conversão de energia essencial para proteger e manter a estabilidade de toda a placa-mãe.</p>
+                <span class="botao-cartao">Estudar Energia ➔</span>
+            </div>
+
+            <!-- Portas USB -->
+            <div class="cartao-componente" onclick="location.href='pages/ConectoresUsb(index).html'">
+                <img src="images/figures/IMG_9609_1.jpg" alt="Conectores USB">
+                <h3>Entrada e Saída (USB)</h3>
+                <p>As portas de barramento universal para comunicação rápida e alimentação de periféricos de entrada e saída.</p>
+                <span class="botao-cartao">Estudar E/S ➔</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Sobre Section ── -->
+    <section id="secao-sobre" class="secao-sobre">
+        <div class="linha">
+            <div class="grupo-paragrafos left">
+                <h2>Sobre o Projeto</h2>
+                <p>Este site educacional foi desenvolvido para apresentar de forma clara, didática e estruturada os conceitos fundamentais da Arquitetura de Computadores. Tomando como base a placa-mãe <strong>ASUS TUF Gaming A520M-PLUS</strong>, o projeto detalha o papel de cada circuito e peça na comunicação do hardware.</p>
+                <p>O objetivo é desmistificar o funcionamento interno dos computadores, mostrando como a CPU, a Memória RAM, as memórias secundárias, as interfaces de E/S (como USB) e as vias de expansão (como o barramento PCI Express) interagem em harmonia para executar tarefas e programas do cotidiano.</p>
+                <p>Projeto acadêmico construído com tecnologias web modernas (HTML5, CSS3, JavaScript), fornecendo diagramas interativos, dados técnicos estruturados e recursos visuais premium.</p>
+            </div>
+            <img class="imagem-lateral" src="images/figures/IMG_9608_2.jpg" alt="Detalhe Placa Mãe">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <rodape class="rodape">
+        <p>© 2026 - Projeto Arquitetura de Computadores - ASUS TUF Gaming A520M-PLUS</p>
+    </rodape>
+
+</body>
+</html>
