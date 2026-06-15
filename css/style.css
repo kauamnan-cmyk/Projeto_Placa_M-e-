@@ -1,57 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Exo+2:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
-/* ── Reset ── */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* ── Keyframes ── */
-@keyframes glowPulse {
-    0%, 100% { text-shadow: 0 0 10px #00ff00, 0 0 30px #00ff00, 0 0 60px #00cc00; }
-    50%       { text-shadow: 0 0 20px #00ff00, 0 0 60px #00ff00, 0 0 120px #00aa00; }
-}
-
-@keyframes scanline {
-    0%   { background-position: 0 0; }
-    100% { background-position: 0 100px; }
-}
-
-@keyframes borderGlow {
-    0%, 100% { box-shadow: 0 0 10px rgba(0,255,0,0.2), 0 4px 12px rgba(0,0,0,0.7); }
-    50%       { box-shadow: 0 0 28px rgba(0,255,0,0.5), 0 4px 18px rgba(0,0,0,0.8); }
-}
-
-@keyframes fadeSlideLeft {
-    from { opacity: 0; transform: translateX(-40px); }
-    to   { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes fadeSlideRight {
-    from { opacity: 0; transform: translateX(40px); }
-    to   { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes imgGlow {
-    0%, 100% { box-shadow: 0 0 15px rgba(0,255,0,0.3), 0 0 30px rgba(0,255,0,0.1); }
-    50%       { box-shadow: 0 0 30px rgba(0,255,0,0.7), 0 0 60px rgba(0,255,0,0.3); }
-}
-
-/* ── Body com fundo grid scanline ── */
 body {
-    background-color: #000;
-    background-image:
-        linear-gradient(rgba(0,255,0,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,255,0,0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
-    color: #00ff00;
-    font-family: "Exo 2", sans-serif;
+    background-color: #121214;
+    color: #e1e1e6;
+    font-family: "Roboto", sans-serif;
     padding: 50px 60px;
     display: flex;
     flex-direction: column;
@@ -60,16 +18,14 @@ body {
     min-height: 100vh;
 }
 
-/* ── Título Principal ── */
 h1 {
-    font-family: "Orbitron", monospace;
-    font-size: 3rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 2.5rem;
     font-weight: 900;
-    color: #00ff00;
+    color: #ffc107;
     text-align: center;
-    letter-spacing: 8px;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    animation: glowPulse 2.5s ease-in-out infinite;
     padding: 20px 0 10px;
     position: relative;
 }
@@ -77,144 +33,116 @@ h1 {
 h1::after {
     content: '';
     display: block;
-    width: 60%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #00ff00, transparent);
+    width: 30%;
+    height: 3px;
+    background: #ffc107;
     margin: 12px auto 0;
-    box-shadow: 0 0 12px #00ff00;
 }
 
-/* ── Hero Section ── */
 .destaque {
     text-align: center;
     padding: 30px 20px 10px;
-    animation: fadeIn 0.8s ease both;
 }
 
 .emblema-destaque {
     display: inline-block;
-    font-family: "Orbitron", monospace;
-    font-size: 0.65rem;
-    letter-spacing: 5px;
-    color: #76b900;
-    background: rgba(0, 180, 0, 0.1);
-    border: 1px solid rgba(0, 200, 0, 0.3);
-    border-radius: 20px;
-    padding: 4px 18px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: #ffc107;
+    background: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    border-radius: 4px;
+    padding: 6px 14px;
     margin-bottom: 16px;
     text-transform: uppercase;
+    font-weight: 500;
 }
 
 .subtitulo-destaque {
-    font-family: "Exo 2", sans-serif;
     font-size: 1rem;
-    color: rgba(0, 220, 0, 0.75);
-    letter-spacing: 2px;
+    color: #a8a8b3;
     margin-top: 8px;
-    text-shadow: 0 0 8px rgba(0,255,0,0.3);
 }
 
 .linha-destaque {
-    width: 40%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #00ff00, transparent);
-    margin: 24px auto 0;
-    box-shadow: 0 0 10px rgba(0,255,0,0.5);
+    width: 20%;
+    height: 2px;
+    background: #ffc107;
+    margin: 20px auto 0;
 }
 
-/* ── Subtítulos de seção ── */
 h2 {
-    font-family: "Orbitron", monospace;
-    font-size: 0.8rem;
-    color: #76b900;
-    letter-spacing: 3px;
+    font-size: 1.5rem;
+    color: #ffc107;
     text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
-/* ── Linha texto + imagem ── */
 .linha {
     display: flex;
-    flex-direction: linha;
+    flex-direction: row;
     align-items: center;
     gap: 30px;
     width: 100%;
 }
 
-/* Animações alternadas por posição */
-.linha:nth-child(odd)  .grupo-paragrafos { animation: fadeSlideLeft  0.7s ease both; }
-.linha:nth-child(even) .grupo-paragrafos { animation: fadeSlideRight 0.7s ease both; }
-.linha:nth-child(odd)  .imagem-lateral { animation: fadeSlideRight 0.7s ease both; }
-.linha:nth-child(even) .imagem-lateral { animation: fadeSlideLeft  0.7s ease both; }
-
-/* ── Grupos de parágrafos ── */
 .grupo-paragrafos {
     display: flex;
     flex-direction: column;
     gap: 14px;
     padding: 22px 28px;
-    background: rgba(0, 18, 0, 0.85);
-    border-radius: 10px;
-    border: 1px solid rgba(0, 255, 0, 0.2);
-    animation: borderGlow 3s ease-in-out infinite;
+    background: #202024;
+    border-radius: 8px;
+    border: 1px solid #29292e;
     flex: 1;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s ease;
 }
 
 .grupo-paragrafos:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 35px rgba(0,255,0,0.4), 0 8px 24px rgba(0,0,0,0.8);
+    transform: translateY(-2px);
 }
 
 .grupo-paragrafos.left {
     text-align: justify;
-    border-left: 4px solid #00ff00;
+    border-left: 4px solid #ffc107;
 }
 
 .grupo-paragrafos.right {
     text-align: justify;
-    border-right: 4px solid #00ff00;
-    border-left: none;
+    border-left: 4px solid #ffc107;
 }
 
 .grupo-paragrafos p {
-    color: #00ff00;
-    font-family: "Exo 2", sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.8;
-    text-shadow: 0 0 6px rgba(0,255,0,0.35);
+    color: #e1e1e6;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
-/* ── Imagem lateral ── */
 .imagem-lateral {
     width: 260px;
     height: 260px;
     object-fit: cover;
-    border-radius: 10px;
-    border: 2px solid rgba(0,255,0,0.4);
-    animation: imgGlow 3s ease-in-out infinite;
+    border-radius: 8px;
+    border: 2px solid #29292e;
     flex-shrink: 0;
-    transition: transform 0.35s ease, filter 0.35s ease;
-    filter: brightness(0.9) saturate(1.1);
+    transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .imagem-lateral:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1) saturate(1.3) drop-shadow(0 0 16px #00ff00);
+    transform: scale(1.02);
+    border-color: #ffc107;
 }
 
-/* ── Imagem centralizada ── */
 .caixa-conteudo {
     align-self: center;
     display: flex;
     justify-content: center;
     align-items: center;
     width: fit-content;
-    padding: 18px;
-    background: rgba(0, 18, 0, 0.6);
-    border-radius: 14px;
-    animation: imgGlow 3s ease-in-out infinite, fadeIn 0.8s ease both;
-    border: 1px solid rgba(0,255,0,0.25);
+    padding: 10px;
+    background: #202024;
+    border-radius: 8px;
+    border: 1px solid #29292e;
 }
 
 .imagem-central {
@@ -222,77 +150,34 @@ h2 {
     max-width: 520px;
     width: 100%;
     height: auto;
-    border-radius: 10px;
-    border: 2px solid rgba(0,255,0,0.35);
+    border-radius: 6px;
 }
 
-/* ── Botão Voltar ── */
 .botao-voltar {
     align-self: center;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-family: "Orbitron", monospace;
     font-size: 0.85rem;
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    color: #00ff00;
-    background: transparent;
-    border: 2px solid #00ff00;
-    border-radius: 8px;
+    color: #121214;
+    background: #ffc107;
+    border: none;
+    border-radius: 6px;
     padding: 12px 32px;
     margin-top: 10px;
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.35s ease;
-    box-shadow: 0 0 12px rgba(0,255,0,0.25), inset 0 0 12px rgba(0,255,0,0.05);
-}
-
-.botao-voltar::before {
-    content: '◄';
-    font-size: 0.9rem;
-    transition: transform 0.3s ease;
-}
-
-.botao-voltar::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0,255,0,0.15), transparent);
-    transition: left 0.5s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .botao-voltar:hover {
-    background: rgba(0,255,0,0.1);
-    box-shadow: 0 0 30px rgba(0,255,0,0.5), inset 0 0 20px rgba(0,255,0,0.1);
-    text-shadow: 0 0 10px #00ff00;
+    background: #ffb300;
     transform: translateY(-2px);
 }
 
-.botao-voltar:hover::before {
-    transform: translateX(-4px);
-}
-
-.botao-voltar:hover::after {
-    left: 100%;
-}
-
-.botao-voltar:active {
-    transform: translateY(1px);
-    box-shadow: 0 0 8px rgba(0,255,0,0.3);
-}
-
-/* ────────────────────────────────────────────────────────
-   PAGE OVERRIDES & COMPONENT STYLES (SCOPED VIA BODY CLASS)
-   ──────────────────────────────────────────────────────── */
-
-/* ── Home Page (index.html) ── */
-body.pagina-inicial {
+body.pagina-inicial, body.pagina-sobre {
     padding-top: 100px !important;
     max-width: 1200px;
     margin: 0 auto;
@@ -303,10 +188,8 @@ body.pagina-inicial {
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    background: rgba(0, 10, 0, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 2px solid rgba(0, 255, 0, 0.3);
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+    background: #202024;
+    border-bottom: 2px solid #ffc107;
     position: fixed;
     top: 0;
     left: 0;
@@ -321,19 +204,16 @@ body.pagina-inicial {
 }
 
 .texto-logo {
-    font-family: "Orbitron", sans-serif;
     font-size: 1.4rem;
     font-weight: 900;
-    color: #00ff00;
-    text-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
-    letter-spacing: 3px;
+    color: #ffc107;
+    letter-spacing: 1px;
 }
 
 .emblema-logo {
-    font-family: "Orbitron", monospace;
     font-size: 0.6rem;
-    background: #76b900;
-    color: #000;
+    background: #ffc107;
+    color: #121214;
     padding: 2px 6px;
     font-weight: bold;
     border-radius: 3px;
@@ -346,41 +226,31 @@ body.pagina-inicial {
 }
 
 .menu-navegacao a {
-    font-family: "Orbitron", sans-serif;
-    color: rgba(0, 255, 0, 0.7);
+    color: #a8a8b3;
     text-decoration: none;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 700;
-    letter-spacing: 1.5px;
     padding: 8px 14px;
-    border: 1px solid transparent;
-    border-radius: 6px;
-    transition: all 0.3s ease;
+    border-radius: 4px;
+    transition: all 0.2s ease;
     text-transform: uppercase;
 }
 
 .menu-navegacao a:hover, .menu-navegacao a.active {
-    color: #00ff00;
-    border-color: rgba(0, 255, 0, 0.4);
-    background: rgba(0, 255, 0, 0.1);
-    text-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
-    box-shadow: inset 0 0 8px rgba(0, 255, 0, 0.1);
+    color: #121214;
+    background: #ffc107;
 }
 
 .vitrine-componentes {
     margin-top: 30px;
     text-align: center;
-    animation: fadeIn 0.8s ease both;
 }
 
 .titulo-secao {
-    font-family: "Orbitron", sans-serif;
     font-size: 1.8rem;
-    color: #00ff00;
+    color: #ffc107;
     margin-bottom: 30px;
-    letter-spacing: 4px;
     text-transform: uppercase;
-    text-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
     position: relative;
     display: inline-block;
 }
@@ -389,63 +259,52 @@ body.pagina-inicial {
     content: '';
     display: block;
     width: 50%;
-    height: 1px;
-    background: #00ff00;
+    height: 2px;
+    background: #ffc107;
     margin: 8px auto 0;
-    box-shadow: 0 0 8px #00ff00;
 }
 
 .grade-cartoes {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     padding: 10px 0;
 }
 
 .cartao-componente {
-    background: rgba(0, 15, 0, 0.85);
-    border: 1px solid rgba(0, 255, 0, 0.15);
-    border-radius: 12px;
-    padding: 22px;
+    background: #202024;
+    border: 1px solid #29292e;
+    border-radius: 8px;
+    padding: 20px;
     text-align: left;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    transition: transform 0.2s ease, border-color 0.2s ease;
     display: flex;
     flex-direction: column;
 }
 
 .cartao-componente:hover {
-    transform: translateY(-6px);
-    border-color: #00ff00;
-    box-shadow: 0 0 25px rgba(0, 255, 0, 0.3);
+    transform: translateY(-4px);
+    border-color: #ffc107;
 }
 
 .cartao-componente img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-radius: 8px;
-    border: 1px solid rgba(0, 255, 0, 0.2);
+    border-radius: 6px;
+    border: 1px solid #29292e;
     margin-bottom: 16px;
-    transition: all 0.3s ease;
-}
-
-.cartao-componente:hover img {
-    border-color: #00ff00;
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
 }
 
 .cartao-componente h3 {
-    font-family: "Orbitron", sans-serif;
-    color: #00ff00;
-    font-size: 1.15rem;
+    color: #ffc107;
+    font-size: 1.2rem;
     margin-bottom: 8px;
-    letter-spacing: 1px;
 }
 
 .cartao-componente p {
-    color: rgba(0, 220, 0, 0.75);
+    color: #a8a8b3;
     font-size: 0.9rem;
     line-height: 1.6;
     margin-bottom: 16px;
@@ -453,58 +312,42 @@ body.pagina-inicial {
 }
 
 .botao-cartao {
-    font-family: "Orbitron", sans-serif;
-    font-size: 0.75rem;
-    color: #76b900;
+    font-size: 0.8rem;
+    color: #ffc107;
     font-weight: 700;
     align-self: flex-start;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
 }
 
 .cartao-componente:hover .botao-cartao {
-    color: #00ff00;
-    text-shadow: 0 0 6px rgba(0, 255, 0, 0.4);
-    padding-left: 5px;
+    text-decoration: underline;
 }
 
 .chamada-mapa {
-    background: linear-gradient(135deg, rgba(0, 15, 0, 0.9) 0%, rgba(0, 35, 0, 0.9) 100%);
-    border: 1px solid rgba(0, 255, 0, 0.3);
-    border-left: 5px solid #00ff00;
-    border-radius: 12px;
+    background: #202024;
+    border: 1px solid #29292e;
+    border-left: 5px solid #ffc107;
+    border-radius: 8px;
     padding: 40px;
     text-align: center;
     margin: 40px 0;
-    box-shadow: 0 0 25px rgba(0, 255, 0, 0.15);
-    position: relative;
-    overflow: hidden;
-    animation: fadeIn 0.8s ease both;
 }
 
 .chamada-mapa h2 {
-    font-family: "Orbitron", sans-serif;
-    font-size: 1.7rem;
-    color: #00ff00;
+    font-size: 1.6rem;
+    color: #ffc107;
     margin-bottom: 12px;
-    text-shadow: 0 0 10px rgba(0,255,0,0.4);
-    letter-spacing: 2px;
 }
 
 .chamada-mapa p {
     max-width: 800px;
     margin: 0 auto 24px;
-    color: rgba(0, 220, 0, 0.8);
+    color: #a8a8b3;
     font-size: 0.95rem;
     line-height: 1.8;
 }
 
 .botao-explorar {
     margin-top: 0 !important;
-}
-
-.botao-explorar::before {
-    content: '🔍 ';
 }
 
 .secao-sobre {
@@ -514,31 +357,50 @@ body.pagina-inicial {
 .rodape {
     text-align: center;
     padding: 30px;
-    border-top: 1px solid rgba(0, 255, 0, 0.1);
-    color: rgba(0, 220, 0, 0.5);
+    border-top: 1px solid #29292e;
+    color: #a8a8b3;
     font-size: 0.8rem;
-    font-family: "Orbitron", monospace;
-    letter-spacing: 2px;
     margin-top: 40px;
 }
 
 @media (max-width: 768px) {
+    body {
+        padding: 30px 20px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .linha {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .imagem-lateral {
+        width: 100%;
+        max-width: 260px;
+        height: auto;
+    }
     .cabecalho-principal {
         flex-direction: column;
         gap: 15px;
         padding: 15px 20px;
+        position: static;
     }
-    body.pagina-inicial {
-        padding-top: 140px !important;
+    body.pagina-inicial, body.pagina-sobre {
+        padding-top: 30px !important;
         padding-left: 20px;
         padding-right: 20px;
     }
     .menu-navegacao {
         justify-content: center;
+        gap: 8px;
+    }
+    .menu-navegacao a {
+        padding: 6px 10px;
+        font-size: 0.75rem;
     }
 }
 
-/* ── Grid Page (grid.html) ── */
 body.pagina-grade {
     max-width: 1200px;
     margin: 0 auto;
@@ -553,50 +415,44 @@ body.pagina-grade {
 }
 
 .item-grade {
-    background: rgba(0, 15, 0, 0.85);
-    border: 1px solid rgba(0, 255, 0, 0.15);
-    border-radius: 10px;
+    background: #202024;
+    border: 1px solid #29292e;
+    border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease;
+    transition: transform 0.2s ease, border-color 0.2s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .item-grade:hover {
-    transform: scale(1.02);
-    border-color: #00ff00;
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.25);
+    transform: scale(1.01);
+    border-color: #ffc107;
 }
 
 .item-grade h3 {
-    font-family: "Orbitron", sans-serif;
-    color: #00ff00;
+    color: #ffc107;
     font-size: 1.1rem;
     margin-bottom: 10px;
-    text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
 }
 
 .item-grade p {
-    color: rgba(0, 220, 0, 0.8);
-    font-size: 0.85rem;
+    color: #a8a8b3;
+    font-size: 0.9rem;
     line-height: 1.5;
     margin-bottom: 15px;
 }
 
 .link-grade {
-    font-family: "Orbitron", sans-serif;
-    font-size: 0.75rem;
-    color: #76b900;
+    font-size: 0.8rem;
+    color: #ffc107;
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .link-grade:hover {
-    color: #00ff00;
-    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    text-decoration: underline;
 }
 
 .coluna-12 { grid-column: span 12; }
@@ -626,10 +482,9 @@ body.pagina-tabela {
 .tabela-responsiva {
     overflow-x: auto;
     margin-top: 40px;
-    background: rgba(0, 15, 0, 0.85);
-    border: 1px solid rgba(0, 255, 0, 0.2);
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 255, 0, 0.15);
+    background: #202024;
+    border: 1px solid #29292e;
+    border-radius: 8px;
     padding: 20px;
 }
 
@@ -637,30 +492,27 @@ body.pagina-tabela {
     width: 100%;
     border-collapse: collapse;
     text-align: left;
-    font-family: "Exo 2", sans-serif;
-    color: #00ff00;
+    color: #e1e1e6;
 }
 
 .tabela-responsiva th {
-    font-family: "Orbitron", sans-serif;
     font-size: 0.9rem;
-    color: #76b900;
-    border-bottom: 2px solid rgba(0, 255, 0, 0.4);
+    color: #ffc107;
+    border-bottom: 2px solid #29292e;
     padding: 15px 10px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .tabela-responsiva td {
     padding: 15px 10px;
-    border-bottom: 1px solid rgba(0, 255, 0, 0.1);
+    border-bottom: 1px solid #29292e;
     font-size: 0.9rem;
     line-height: 1.5;
-    text-shadow: 0 0 5px rgba(0, 255, 0, 0.2);
 }
 
 .tabela-responsiva tr:hover {
-    background: rgba(0, 255, 0, 0.05);
+    background: rgba(255, 193, 7, 0.05);
 }
 
 .tabela-responsiva tr:last-child td {
@@ -669,43 +521,40 @@ body.pagina-tabela {
 
 .indicador-volatilidade {
     display: inline-block;
-    padding: 3px 8px;
+    padding: 4px 8px;
     border-radius: 4px;
     font-size: 0.75rem;
     font-weight: bold;
-    font-family: "Orbitron", monospace;
 }
 
 .volatil-sim {
-    background: rgba(255, 0, 0, 0.15);
-    color: #ff3333;
-    border: 1px solid rgba(255, 0, 0, 0.3);
+    background: rgba(220, 53, 69, 0.2);
+    color: #f8d7da;
+    border: 1px solid rgba(220, 53, 69, 0.4);
 }
 
 .volatil-nao {
-    background: rgba(0, 255, 0, 0.15);
-    color: #00ff00;
-    border: 1px solid rgba(0, 255, 0, 0.3);
+    background: rgba(40, 167, 69, 0.2);
+    color: #d4edda;
+    border: 1px solid rgba(40, 167, 69, 0.4);
 }
 
 .volatil-na {
-    background: rgba(255, 255, 255, 0.1);
-    color: #ccc;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(108, 117, 125, 0.2);
+    color: #e2e3e5;
+    border: 1px solid rgba(108, 117, 125, 0.4);
 }
 
 .link-componente {
-    color: #00ff00;
+    color: #ffc107;
     text-decoration: none;
     font-weight: bold;
 }
 
 .link-componente:hover {
     text-decoration: underline;
-    text-shadow: 0 0 8px #00ff00;
 }
 
-/* ── Budget Page (orçamento.html) ── */
 body.pagina-orcamento {
     max-width: 1200px;
     margin: 0 auto;
@@ -720,22 +569,19 @@ body.pagina-orcamento {
 }
 
 .formulario-orcamento, .resultado-orcamento {
-    background: rgba(0, 15, 0, 0.85);
-    border: 1px solid rgba(0, 255, 0, 0.2);
-    border-radius: 12px;
+    background: #202024;
+    border: 1px solid #29292e;
+    border-radius: 8px;
     padding: 30px;
-    box-shadow: 0 4px 20px rgba(0, 255, 0, 0.15);
     flex: 1;
     min-width: 320px;
 }
 
 .formulario-orcamento h3, .resultado-orcamento h3 {
-    font-family: "Orbitron", sans-serif;
-    color: #00ff00;
+    color: #ffc107;
     margin-bottom: 20px;
-    border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+    border-bottom: 1px solid #29292e;
     padding-bottom: 10px;
-    letter-spacing: 2px;
     text-transform: uppercase;
 }
 
@@ -747,29 +593,25 @@ body.pagina-orcamento {
 }
 
 .grupo-formulario label {
-    font-family: "Orbitron", sans-serif;
     font-size: 0.8rem;
-    color: #76b900;
-    letter-spacing: 1px;
+    color: #a8a8b3;
     text-transform: uppercase;
 }
 
 .grupo-formulario select {
-    background: #000;
-    border: 1px solid rgba(0, 255, 0, 0.3);
+    background: #121214;
+    border: 1px solid #29292e;
     border-radius: 6px;
-    color: #00ff00;
-    font-family: "Exo 2", sans-serif;
+    color: #e1e1e6;
     padding: 10px;
     font-size: 0.95rem;
     outline: none;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: border-color 0.2s ease;
 }
 
 .grupo-formulario select:focus {
-    border-color: #00ff00;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.25);
+    border-color: #ffc107;
 }
 
 .item-resumo {
@@ -777,41 +619,36 @@ body.pagina-orcamento {
     justify-content: space-between;
     margin-bottom: 12px;
     font-size: 0.9rem;
-    color: rgba(0, 220, 0, 0.85);
-    border-bottom: 1px dashed rgba(0, 255, 0, 0.1);
+    color: #e1e1e6;
+    border-bottom: 1px dashed #29292e;
     padding-bottom: 8px;
 }
 
 .item-resumo .price {
     font-weight: bold;
-    color: #00ff00;
+    color: #ffc107;
 }
 
 .container-total {
     margin-top: 30px;
     padding-top: 15px;
-    border-top: 2px solid #00ff00;
+    border-top: 2px solid #ffc107;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .rotulo-total {
-    font-family: "Orbitron", sans-serif;
-    font-size: 1.2rem;
-    color: #76b900;
-    letter-spacing: 2px;
+    font-size: 1.1rem;
+    color: #a8a8b3;
 }
 
 .preco-total {
-    font-family: "Orbitron", sans-serif;
-    font-size: 1.6rem;
-    color: #00ff00;
+    font-size: 1.5rem;
+    color: #ffc107;
     font-weight: 900;
-    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
 }
 
-/* ── Form Page (formulario.html) ── */
 body.pagina-formulario {
     max-width: 800px;
     margin: 0 auto;
@@ -819,22 +656,18 @@ body.pagina-formulario {
 }
 
 .container-formulario {
-    background: rgba(0, 15, 0, 0.85);
-    border: 1px solid rgba(0, 255, 0, 0.2);
-    border-radius: 12px;
+    background: #202024;
+    border: 1px solid #29292e;
+    border-radius: 8px;
     padding: 40px;
-    box-shadow: 0 4px 20px rgba(0, 255, 0, 0.15);
     margin-top: 30px;
-    animation: fadeIn 0.8s ease both;
 }
 
 .container-formulario h3 {
-    font-family: "Orbitron", sans-serif;
-    color: #00ff00;
+    color: #ffc107;
     margin-bottom: 25px;
-    border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+    border-bottom: 1px solid #29292e;
     padding-bottom: 10px;
-    letter-spacing: 2px;
     text-transform: uppercase;
 }
 
@@ -854,10 +687,8 @@ body.pagina-formulario {
 }
 
 .linha-formulario label, .grupo-formulario label {
-    font-family: "Orbitron", sans-serif;
     font-size: 0.8rem;
-    color: #76b900;
-    letter-spacing: 1px;
+    color: #a8a8b3;
     text-transform: uppercase;
 }
 
@@ -865,23 +696,21 @@ body.pagina-formulario {
 .linha-formulario input[type="email"],
 .linha-formulario select,
 .grupo-formulario textarea {
-    background: #000;
-    border: 1px solid rgba(0, 255, 0, 0.3);
+    background: #121214;
+    border: 1px solid #29292e;
     border-radius: 6px;
-    color: #00ff00;
-    font-family: "Exo 2", sans-serif;
+    color: #e1e1e6;
     padding: 12px;
     font-size: 0.95rem;
     outline: none;
-    transition: all 0.3s ease;
+    transition: border-color 0.2s ease;
 }
 
 .linha-formulario input[type="text"]:focus,
 .linha-formulario input[type="email"]:focus,
 .linha-formulario select:focus,
 .grupo-formulario textarea:focus {
-    border-color: #00ff00;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.25);
+    border-color: #ffc107;
 }
 
 .grupo-formulario textarea {
@@ -899,54 +728,45 @@ body.pagina-formulario {
 .estrela-avaliacao {
     cursor: pointer;
     font-size: 1.5rem;
-    color: rgba(0, 255, 0, 0.2);
+    color: #29292e;
     transition: color 0.2s ease;
 }
 
 .estrela-avaliacao.active {
-    color: #00ff00;
-    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    color: #ffc107;
 }
 
 .botao-enviar {
-    font-family: "Orbitron", monospace;
     font-size: 0.9rem;
     font-weight: 700;
-    letter-spacing: 2px;
     text-transform: uppercase;
-    color: #00ff00;
-    background: transparent;
-    border: 2px solid #00ff00;
-    border-radius: 8px;
+    color: #121214;
+    background: #ffc107;
+    border: none;
+    border-radius: 6px;
     padding: 14px 40px;
     cursor: pointer;
-    transition: all 0.35s ease;
-    box-shadow: 0 0 12px rgba(0,255,0,0.2);
+    transition: background-color 0.2s ease;
     margin-top: 15px;
     width: 100%;
 }
 
 .botao-enviar:hover {
-    background: rgba(0,255,0,0.1);
-    box-shadow: 0 0 25px rgba(0,255,0,0.4);
-    text-shadow: 0 0 8px #00ff00;
-    transform: translateY(-2px);
+    background: #ffb300;
 }
 
 .mensagem-sucesso {
     display: none;
-    background: rgba(0, 50, 0, 0.3);
-    border: 1px solid #00ff00;
-    color: #00ff00;
+    background: rgba(40, 167, 69, 0.15);
+    border: 1px solid #28a745;
+    color: #28a745;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 6px;
     margin-top: 20px;
     text-align: center;
-    font-family: "Orbitron", sans-serif;
-    text-shadow: 0 0 5px rgba(0, 255, 0, 0.4);
+    font-weight: bold;
 }
 
-/* ── Motherboard Map Page (motherboard.html) ── */
 body.pagina-mapa {
     align-items: center;
     justify-content: center;
@@ -958,3 +778,120 @@ body.pagina-mapa {
     align-items: center;
     gap: 20px;
 }
+
+.pagina-mapa .imagem-central {
+    max-width: 900px;
+    border: 2px solid #29292e;
+    transition: border-color 0.2s ease;
+}
+
+.pagina-mapa .imagem-central:hover {
+    border-color: #ffc107;
+}
+
+button[onclick^="window.location.href='PlacadeVideo"],
+button[onclick^="window.location.href='MemoriaSecundaria"] {
+    background: #202024;
+    border: 1px solid #29292e;
+    color: #e1e1e6;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    margin: 10px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    text-align: left;
+}
+
+button[onclick^="window.location.href='PlacadeVideo"]:hover,
+button[onclick^="window.location.href='MemoriaSecundaria"]:hover {
+    transform: translateY(-2px);
+    border-color: #ffc107;
+}
+
+button[onclick^="window.location.href='PlacadeVideo"] img,
+button[onclick^="window.location.href='MemoriaSecundaria"] img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+button[onclick^="window.location.href='PlacadeVideo"] p,
+button[onclick^="window.location.href='MemoriaSecundaria"] p {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #ffc107;
+    margin: 0;
+}
+
+.container-sobre {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.grade-grupo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.cartao-membro {
+    background: #202024;
+    border: 1px solid #29292e;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cartao-membro:hover {
+    transform: translateY(-4px);
+    border-color: #ffc107;
+}
+
+.avatar-membro {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #ffc107;
+    color: #121214;
+    font-size: 2rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border: 3px solid #29292e;
+    user-select: none;
+}
+
+.cartao-membro h3 {
+    color: #ffc107;
+    font-size: 1.25rem;
+    margin-bottom: 6px;
+}
+
+.funcao-membro {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #a8a8b3;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.descricao-membro {
+    color: #e1e1e6;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+

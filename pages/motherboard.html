@@ -1,140 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa da Placa-Mãe</title>
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>projeto placa mae</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body class="pagina-mapa">
-    <div class="container-mapa">
-        <header class="destaque">
-            <div class="emblema-destaque">DIAGRAMA INTERATIVO · PLACA MÃE</div>
-            <h1>Mapa Interativo</h1>
-            <p class="subtitulo-destaque">Clique nas áreas destacadas da placa-mãe para explorar seus componentes</p>
-            <div class="linha-destaque"></div>
-        </header>
-        <img
-          src="placa-mae.jpg"
-          usemap="#placaMaeMap"
-          width="679"
-          height="658"
-          class="imagem-central"
-          style="border: 2px solid rgba(0, 255, 0, 0.4); box-shadow: 0 0 30px rgba(0, 255, 0, 0.2);"
-        />
+  <div class="container-mapa">
+    <header class="destaque">
+      <div class="emblema-destaque">DIAGRAMA INTERATIVO · PLACA MÃE</div>
+      <h1>Mapa Interativo</h1>
+      <p class="subtitulo-destaque">Clique nas áreas destacadas da placa-mãe para explorar seus componentes</p>
+      <div class="linha-destaque"></div>
+    </header>
+    <img src="../images/placa mae/91lKZoY9CWL._AC_SX679_.jpg" usemap="#placaMaeMap" width="679" height="653" class="imagem-central" />
 
-<map name="placaMaeMap">
+    <map name="placaMaeMap">
+      <area shape="rect" coords="103,15,50,350" href="ConectoresUsb(index).html" alt="Dissipador VRM"
+        title="Dissipador do VRM">
+      <area shape="rect" coords="220,20,430,140" href="FonteDeEnergia(index).html" alt="VRM"
+        title="Circuito Regulador de Tensão (VRM)">
+      <area shape="rect" coords="280,155,405,280" href="Processador(index).html" alt="Soquete do Processador"
+        title="Soquete do Processador (AM4)">
+      <area shape="rect" coords="445,75,535,365" href="MemoriaRam(index).html" alt="Slots de Memória RAM"
+        title="Slots de Memória RAM (DDR4)">
+      <area shape="rect" coords="590,125,655,335" href="FonteDeEnergia(index).html" alt="Conector ATX 24 pinos"
+        title="Conector ATX 24 pinos (Alimentação Principal)">
+      <area shape="rect" coords="0,265,58,525" href="ConectoresUsb(index).html" alt="Portas USB Traseiras"
+        title="Portas USB Traseiras (USB 2.0 / 3.2)">
+      <area shape="rect" coords="110,420,495,465" href="SlotPCIExpress(index).html" alt="PCI Express x16"
+        title="Slot PCI Express x16">
+      <area shape="circle" coords="200,548,38" href="BateriaCmos(index).html" alt="Bateria CMOS"
+        title="Bateria CMOS (CR2032)">
+      <area shape="rect" coords="425,470,555,595" href="SlotPCIExpress(index).html" alt="Chipset"
+        title="Chipset AMD A520">
+      <area shape="rect" coords="510,585,679,653" href="MemoriaSecundaria(index).html" alt="Portas SATA"
+        title="Portas SATA (Armazenamento)">
+      <area shape="rect" coords="0,530,100,653" href="ConectoresUsb(index).html" alt="Áudio Onboard"
+        title="Circuito de Áudio Onboard">
+      <area shape="rect" coords="575,345,675,410" href="ConectoresUsb(index).html" alt="Header USB 3.2"
+        title="Header USB 3.2 Gen 1 (U32G1_12)">
+      <area shape="rect" coords="215,595,395,653" href="ConectoresUsb(index).html" alt="USB Interno"
+        title="Conectores USB Internos (USB_12 / USB_34)">
+      <area shape="rect" coords="340,610,510,653" href="ConectoresUsb(index).html" alt="Painel Frontal"
+        title="Conectores do Painel Frontal">
+    </map>
+    <button class="botao-voltar" onclick="window.location.href='../index.html'">Voltar para Home</button>
+  </div>
 
-  <!-- Soquete CPU -->
-  <area
-    shape="rect"
-    coords="285,170,395,285"
-    href="Processador(index).html"
-    alt="Soquete do Processador"
-    title="Soquete do Processador"
-  >
+  <script>
+    window.addEventListener('load', function () {
+      var img = document.querySelector('.imagem-central');
+      var areas = document.querySelectorAll('area');
+      var originalWidth = 679;
 
-  <!-- Slots RAM -->
-  <area
-    shape="rect"
-    coords="470,85,575,370"
-    href="MemoriaRam(index).html"
-    alt="Slots de Memória RAM"
-    title="Slots de Memória RAM"
-  >
+      for (var i = 0; i < areas.length; i++) {
+        areas[i].setAttribute('data-original-coords', areas[i].coords);
+      }
 
-  <!-- Conector ATX 24 pinos -->
-  <area
-    shape="rect"
-    coords="595,140,645,340"
-    href="FonteDeEnergia(index).html"
-    alt="Conector ATX 24 pinos"
-    title="Conector ATX 24 pinos"
-  >
+      function resizeMap() {
+        var currentWidth = img.clientWidth;
+        if (currentWidth === 0) return;
+        var scale = currentWidth / originalWidth;
 
-  <!-- VRM -->
-  <area
-    shape="rect"
-    coords="220,25,430,145"
-    href="FonteDeEnergia(index).html"
-    alt="VRM"
-    title="Circuito Regulador de Tensão (VRM)"
-  >
+        for (var i = 0; i < areas.length; i++) {
+          var originalCoords = areas[i].getAttribute('data-original-coords');
+          var coords = originalCoords.split(',');
+          var scaled = [];
+          for (var j = 0; j < coords.length; j++) {
+            scaled.push(Math.round(Number(coords[j]) * scale));
+          }
+          areas[i].coords = scaled.join(',');
+        }
+      }
 
-  <!-- Dissipador VRM -->
-  <area
-    shape="rect"
-    coords="0,20,190,220"
-    href="FonteDeEnergia(index).html"
-    alt="Dissipador VRM"
-    title="Dissipador do VRM"
-  >
-
-  <!-- Slot PCIe x16 -->
-  <area
-    shape="rect"
-    coords="165,430,485,470"
-    href="SlotPCIExpress(index).html"
-    alt="PCI Express x16"
-    title="Slot PCI Express x16"
-  >
-
-  <!-- Bateria CMOS -->
-  <area
-    shape="circle"
-    coords="195,505,32"
-    href="BateriaCmos(index).html"
-    alt="Bateria CMOS"
-    title="Bateria CMOS"
-  >
-
-  <!-- Chipset -->
-  <area
-    shape="rect"
-    coords="425,480,545,595"
-    href="#chipset"
-    alt="Chipset"
-    title="Chipset AMD A520"
-  >
-
-  <!-- Portas SATA -->
-  <area
-    shape="rect"
-    coords="505,590,675,650"
-    href="MemoriaSecundaria(index).html"
-    alt="Portas SATA"
-    title="Portas SATA"
-  >
-
-  <!-- Áudio onboard -->
-  <area
-    shape="rect"
-    coords="0,540,95,655"
-    href="#audio"
-    alt="Áudio Onboard"
-    title="Circuito de Áudio"
-  >
-
-  <!-- Painel frontal -->
-  <area
-    shape="rect"
-    coords="345,615,505,655"
-    href="#frontpanel"
-    alt="Painel Frontal"
-    title="Conectores do Painel Frontal"
-  >
-
-  <!-- Conectores USB internos -->
-  <area
-    shape="rect"
-    coords="250,585,380,645"
-    href="ConectoresUsb(index).html"
-    alt="USB Interno"
-    title="Conectores USB Internos"
-  >
-
-</map>
-        <button class="botao-voltar" onclick="window.location.href='../index.html'">Voltar para Home</button>
-    </div>
+      resizeMap();
+      window.addEventListener('resize', resizeMap);
+    });
+  </script>
 </body>
+
 </html>

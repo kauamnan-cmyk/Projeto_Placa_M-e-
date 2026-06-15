@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orçamento de PC</title>
+    <title>projeto placa mae</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="pagina-orcamento">
@@ -17,11 +17,11 @@
 
     <main class="container-orcamento">
         
-        <!-- Formulário de Seleção -->
+        
         <section class="formulario-orcamento">
             <h3>Selecione os Componentes</h3>
             
-            <!-- Processador -->
+            
             <div class="grupo-formulario">
                 <label for="selecao-cpu">Processador (Socket AM4)</label>
                 <select id="selecao-cpu" onchange="updateBudget()">
@@ -32,7 +32,7 @@
                 </select>
             </div>
 
-            <!-- Memória RAM -->
+            
             <div class="grupo-formulario">
                 <label for="selecao-ram">Memória RAM (DDR4)</label>
                 <select id="selecao-ram" onchange="updateBudget()">
@@ -43,7 +43,7 @@
                 </select>
             </div>
 
-            <!-- Placa de Vídeo -->
+            
             <div class="grupo-formulario">
                 <label for="selecao-gpu">Placa de Vídeo (PCIe x16)</label>
                 <select id="selecao-gpu" onchange="updateBudget()">
@@ -54,7 +54,7 @@
                 </select>
             </div>
 
-            <!-- Armazenamento -->
+            
             <div class="grupo-formulario">
                 <label for="selecao-ssd">Armazenamento Secundário</label>
                 <select id="selecao-ssd" onchange="updateBudget()">
@@ -65,7 +65,7 @@
                 </select>
             </div>
 
-            <!-- Fonte de Alimentação -->
+            
             <div class="grupo-formulario">
                 <label for="selecao-fonte">Fonte de Alimentação</label>
                 <select id="selecao-fonte" onchange="updateBudget()">
@@ -76,7 +76,7 @@
             </div>
         </section>
 
-        <!-- Resumo do Orçamento -->
+        
         <section class="resultado-orcamento">
             <h3>Resumo da Montagem</h3>
             
@@ -116,7 +116,7 @@
                 if (price > 0) {
                     selectedCount++;
                     total += price;
-                    const text = selectedOption.text.split(' - ')[0]; // Pega o nome sem o preço no final
+                    const text = selectedOption.text.split(' - ')[0];
                     summaryHTML += `
                         <div class="item-resumo">
                             <span><strong>${selectObj.label}:</strong> ${text}</span>
